@@ -15,6 +15,8 @@ const showTasks = async () => {
       loadingDOM.style.visibility = 'hidden'
       return
     }
+
+    console.log(tasks)
     const allTasks = tasks
       .map((task) => {
         const { completed, _id: taskID, name } = task
@@ -45,7 +47,6 @@ const showTasks = async () => {
 }
 
 showTasks()
-
 // delete task /api/tasks/:id
 
 tasksDOM.addEventListener('click', async (e) => {
